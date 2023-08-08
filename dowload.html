@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+        }
+        body{
+           
+        }
+        .container{
+            
+            width: 100%;
+            font-family: sans-serif;
+            font-size: large;
+            font-weight: 500;
+            cursor: pointer;
+            
+                    }
+        nav{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 30px;
+           
+           
+          line-height: 20vh;
+         
+        }
+        .icon{
+           display: none; 
+        }
+        nav i{
+               font-size: larger;
+               display: none;
+        }
+        nav ul{
+            display: flex;
+           
+        }
+        nav ul li{
+            margin: 0px 30px 0px 30px
+
+        }
+
+        .row{
+            display: flex;
+            width: 100%;
+            height: 55vh;
+            gap: 10px;
+            
+            
+        }
+        .col1{
+            flex: 50%;
+            text-align: justify;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           line-height: 80px;
+           font-family: sans-serif;
+
+        }
+        .col1 h2 , h4{
+            font-size: 30px;
+            opacity: 0.7;
+        }
+        .col1 h1{
+            font-size: 30px;
+            letter-spacing: 2px;
+            color: blue;
+        }
+        .col2{
+            flex: 50%;
+           
+            display: flex;
+            justify-content: center;
+        }
+        @media screen and (max-width:800px) {
+          nav{
+            font-size: medium;
+         align-items: center;
+         
+          }
+          .logo img{
+            position: absolute;
+            top: 40px;
+            
+            width:  100px;
+            height: 50px;
+            left: 30px;
+          }
+          nav ul{
+            margin-left: 100px;
+           
+          }
+          nav ul li{
+            margin: -10px 10px;
+          }
+
+          .row{
+            display: flex;
+            flex-direction: column;
+                   }
+
+            .col1 h2 , h4{
+            font-size: 30px;
+            opacity: 0.7;
+        }
+        .col1 h1{
+            font-size: 30px;
+            letter-spacing: 2px;
+            color: blue;
+        }
+
+        }
+
+       
+        @media (min-width:320px) and (max-width:500px) {
+            .icon{
+           display:block;
+           
+        }
+        .icon{
+            position: absolute;
+            top:16px;
+            right:  30px;
+            font-size: 30px;
+            
+        }
+        .logo img{
+            top: 40px;
+
+        }
+        nav ul li{
+          margin: 0px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            line-height: 50px;
+            margin-top: 100px;
+            display: none;
+        }
+        .showmenu{
+            display: block;
+        }
+
+        .row{
+           margin-top: 150px;
+
+                   }
+
+         .col1 h2 , h4{
+            font-size: 20px;
+            opacity: 0.7;
+           
+        }
+        .col1 h1{
+            font-size: 30px;
+            letter-spacing: 2px;
+            color: blue;
+        }
+        .col1{
+            line-height: 50px; 
+            width: 100%;
+        }
+        
+        
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav >
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Lacoste_logo.svg/800px-Lacoste_logo.svg.png" width="150px" height="70px">
+            </div>
+            <ul>
+                <li> Home</li>
+                <li> About</li>
+                <li> Services</li>
+                <li> Contact</li>
+                <li> Help</li>
+            </ul>
+                      
+            <div class="icon" id="icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        
+    </div>
+    <header>
+         <div class="row">
+            <div class="col1">
+                <h2>I Am </h2>
+                <h4>FROND-END-DELEVOPER</h4>
+                <h1> { DINESH A }</h1>
+
+            </div>
+            <div class="col2">
+                <img src="https://png.pngtree.com/png-vector/20220613/ourmid/pngtree-businessman-cartoon-flat-vector-illustration-png-image_5067309.png">
+
+            </div>
+         </div>
+      
+
+    </header>
+
+
+    <script>
+    let menu = document.querySelector(" .icon ")
+    let result = document.querySelector("nav ul")
+     menu.addEventListener("click", () =>{
+        result.classList.toggle("showmenu")
+      });
+    </script>
+</body>
+</html>
